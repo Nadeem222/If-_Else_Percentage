@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ffffff85;
+    
+        }
+        section {
+            border-radius: solid rgb(22, 185, 112);
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(7, 34, 135);
+            width: 25%;
+            height: 45vh;
+            /* border: solid rgb(103, 92, 8); */
+            margin: auto;
+            color: rgb(248, 205, 50);
+            border-radius: 22px;
+        }
+        button {
+            padding: 7px 14px;
+            border-radius: 22px;
+            color: white;
+            background-color: rgb(97, 23, 8);
+            text-decoration-style: solid;
+            margin-top: 20px;
+            
+
+        }
+        form {
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+    <div>
+    <h1>Student Grade Checking</h1>
+    <br>
+    <form onsubmit="doSum(); return false">
+        <b>percentage  : <input id="num1" type="number" placeholder="Enter a Number" required>
+        <br>
+        <br>
+       
+        <button type="submit">Submit</button></b>
+    </form>
+    <h1 id="result">    </h1>
+</div>
+</section>
+
+
+    <script>
+        function doSum() {
+            let percentage = +document.querySelector("#num1").value
+            
+
+            let resultElement = document.querySelector("#result")
+
+            if (percentage < 40 ){
+             resultElement.innerHTML = "Grade D"
+
+            } else if (percentage < 50){
+
+                resultElement.innerHTML ="Grade C"
+
+            }else if (percentage < 60){
+
+                resultElement.innerHTML ="Grade B"
+
+                
+            } else if (percentage < 70){
+
+                resultElement.innerHTML ="Grade B"
+
+                 
+            } else if (percentage < 80) {
+
+                resultElement.innerHTML =" Grade A"
+                
+            } else if ( percentage > 80){
+
+                resultElement.innerHTML =" Grade A +"
+            }          
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
