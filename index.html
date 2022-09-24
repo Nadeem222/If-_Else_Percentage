@@ -71,28 +71,31 @@
 
             let resultElement = document.querySelector("#result")
 
-            if (percentage < 40 ){
+            if (percentage <= 40 ){
+                resultElement.innerHTML = "Fail"
+
+            } else if (percentage <= 50 ){
              resultElement.innerHTML = "Grade D"
 
-            } else if (percentage < 50){
+            } else if (percentage <= 60){
 
                 resultElement.innerHTML ="Grade C"
 
-            }else if (percentage < 60){
+            }else if (percentage <= 70){
 
                 resultElement.innerHTML ="Grade B"
 
                 
-            } else if (percentage < 70){
+            } else if (percentage <= 80){
 
                 resultElement.innerHTML ="Grade B"
 
                  
-            } else if (percentage < 80) {
+            } else if (percentage <= 90) {
 
                 resultElement.innerHTML =" Grade A"
                 
-            } else if ( percentage > 80){
+            } else if ( percentage > 90){
 
                 resultElement.innerHTML =" Grade A +"
             }          
